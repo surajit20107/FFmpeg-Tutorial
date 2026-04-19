@@ -44,3 +44,6 @@ ffmpeg -loglevel info -i input.mp4 -ss 5 -to 15 output/slow_trim.mp4
 # Start from first N seconds and go till N seconds (trim from 15 sec to 25 sec)
 # slow method
 ffmpeg -loglevel info -i input.mp4 -ss 15 -to 25 -c copy output/fast_trim.mp4
+
+# using HH:MM:SS format best for long videos also has MS (Mili seconds HH:MM:SS:MS)
+ffmpeg -loglevel info -i input.mp4 -ss 00:00:15 -to 00:00:25 -c copy output/fast_trim.mp4

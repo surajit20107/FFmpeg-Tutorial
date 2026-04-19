@@ -28,9 +28,19 @@ ffmpeg -loglevel info -i input.mp4 -t 10 output/slow_trim.mp4
 ffmpeg -loglevel info -i input.mp4 -t 10 -c copy output/fast_trim.mp4
 
 
-# Start from first N seconds and go till N seconds
+# Start from first N seconds and go till N seconds (trim from 5 sec and took next 15 sec)
 # slow method
 ffmpeg -loglevel info -i input.mp4 -ss 5 -t 15 output/slow_trim.mp4
 
 # fast method
 ffmpeg -loglevel info -i input.mp4 -ss 5 -t 15 -c copy output/fast_trim.mp4
+
+
+
+# Start from first N seconds and go till N seconds (trim from 5 sec to 20 sec)
+# slow method
+ffmpeg -loglevel info -i input.mp4 -ss 5 -to 15 output/slow_trim.mp4
+
+# Start from first N seconds and go till N seconds (trim from 15 sec to 25 sec)
+# slow method
+ffmpeg -loglevel info -i input.mp4 -ss 15 -to 25 -c copy output/fast_trim.mp4

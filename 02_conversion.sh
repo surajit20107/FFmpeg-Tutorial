@@ -13,3 +13,6 @@ ffmpeg -i input.mp4 -c:v libvpx-vp9 -c:a libopus output/output.webm
 # mp4 to mp3 (extract audio)
 # IMPORTANT: -c copy can cause error here
 ffmpeg -i input.mp4 output/output.mp3
+
+# mkv to mp4
+ffmpeg -i input.mkv -c copy output/output.mp4
